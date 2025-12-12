@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>My Flask Site</title>
-</head>
-<body>
-    <h1>Welcome to My Flask Website!</h1>
-</body>
-</html>
+<h2>All Tools</h2>
+<ul>
+  {% for tool in tools %}
+    <li><a href="{{ url_for('tool', tool_name=tool) }}">{{ tool }}</a></li>
+  {% endfor %}
+</ul>
